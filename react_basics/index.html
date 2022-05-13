@@ -26,9 +26,17 @@
     <script type="text/babel">
         // create a React component
         const Banner = () => {
+            const title = "Welcome to my website"
+            const subtitle = "This is a website for learning React"
+            const address = "https://www.netninja.dev"
+
             return (
-                <div>
-                    <p>Banner</p>
+                <div className="banner">
+                    <h2>{title.toUpperCase()}</h2>
+                    <p>{subtitle}</p>
+                    <p>Today's date is: {new Date().toDateString()}</p>
+                    <p>Randon Number: {Math.floor(Math.random()*100)} </p>
+                    <a href={address} target="blank">Visit the Net Ninja site</a>
                 </div>
             ) 
         }
